@@ -11,7 +11,8 @@ import hashlib
 import sys, os
 from zipfile import ZipFile
 from .imgproc import loadImage
-
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 if sys.version_info[0] == 2:
     from six.moves.urllib.request import urlretrieve
 else:
